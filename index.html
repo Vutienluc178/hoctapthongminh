@@ -892,9 +892,9 @@
             frontEl.style.fontSize = ''; 
             backEl.style.fontSize = '';
 
-            // Đặt trần kích thước hợp lý (Tối đa 56px) để các thẻ ngắn không bị phóng to khổng lồ
-            let maxSize = window.innerWidth < 768 ? 32 : (window.innerWidth < 1024 ? 46 : 56);
-            let minSize = 16; 
+            // Tăng gấp 2 lần kích thước hiển thị trên điện thoại (Từ 32px lên 64px)
+            let maxSize = window.innerWidth < 768 ? 64 : (window.innerWidth < 1024 ? 64 : 80);
+            let minSize = window.innerWidth < 768 ? 24 : 20;
             
             frontEl.style.fontSize = maxSize + 'px';
             backEl.style.fontSize = maxSize + 'px';
